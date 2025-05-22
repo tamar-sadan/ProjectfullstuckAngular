@@ -1,0 +1,128 @@
+/* עיצוב כללי של דף ההתחברות */
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column; /* מוסיף כיוון עמודה על כל הדף */
+  }
+  
+  /* טופס ההתחברות */
+  form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column; /* הצגת השדות בכיוון עמודה */
+  }
+  
+  /* כותרת הדף */
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* עיצוב של שדות הקלט */
+  .form-group {
+    margin-bottom: 20px;
+    direction: rtl; /* לטקסט עברי */
+
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+  }
+  
+  input:focus {
+    border-color: #6a1b9a;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  /* עיצוב של כפתור ההתחברות */
+  button {
+    width: 100%;
+    padding: 14px;
+    background-color: #6a1b9a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* מרווח קטן בין כפתור ההתחברות לכפתור ההרשמה */
+  }
+  
+  button:hover {
+    background-color: #8e24aa;
+  }
+  
+  /* עיצוב שגיאות */
+  .error {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* קישור לרישום */
+  button a {
+    color: #26033b;
+    text-decoration: none;
+  }
+  
+  button a:hover {
+    text-decoration: underline;
+  }
+  
+  /* עיצוב כפתור ההרשמה */
+  .register-link {
+    text-align: center;
+    margin-top: 10px; /* מפריד את כפתור ההרשמה מכפתור ההתחברות */
+  }
+  
+  /* עיצוב כפתור הרשמה מתחת לכפתור התחברות */
+  .register-link button {
+    background-color: #6a1b9a;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%; /* הכפתור יתפוס את כל הרוחב */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-link button:hover {
+    background-color: #8e24aa;
+  }
+  
+  .register-link a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  

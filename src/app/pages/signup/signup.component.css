@@ -1,0 +1,96 @@
+/* עיצוב כללי של דף ההרשמה */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  flex-direction: column; /* הוספתי על מנת שהאלמנטים יסתדרו בצורה אנכית */
+}
+
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  direction: rtl; /* בשביל עברית */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  margin-bottom: 5px; /* רווח בין input ל-error */
+}
+
+input:focus {
+  border-color: #6a1b9a;
+  background-color: #fff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #6a1b9a;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8e24aa;
+}
+
+.error {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.error span {
+  display: block;
+}
+
+/* הוספתי עיצוב לשגיאה הכללית */
+.error-message {
+  color: #f44336;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #fdd;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

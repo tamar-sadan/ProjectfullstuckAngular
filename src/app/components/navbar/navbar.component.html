@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <div class="logo">All Our Events</div>
+  <ul class="nav-links" [class.active]="menuActive">
+    <li><a routerLink="/" (click)="closeMenu()">בית</a></li>
+    <li><a routerLink="/about" (click)="closeMenu()">אודות</a></li>
+    <li><a routerLink="/contact" (click)="closeMenu()">צור קשר</a></li>
+  </ul>
+  <div class="menu-toggle" (click)="toggleMenu()">☰</div>
+</nav>

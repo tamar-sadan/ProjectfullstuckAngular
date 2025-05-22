@@ -1,0 +1,56 @@
+/* עיצוב הכללי של הקונטיינר */
+.events-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
+  }
+  
+  h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* עיצוב של רשימת האירועים */
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 אירועים בשורה */
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .event-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .event-item h3 {
+    font-size: 20px;
+    color: #6a1b9a;
+    margin-bottom: 10px;
+  }
+  
+  .event-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* עיצוב למצב שבו אין אירועים */
+  ng-template {
+    text-align: center;
+    color: #999;
+  }
+  

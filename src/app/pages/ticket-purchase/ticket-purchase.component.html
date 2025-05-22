@@ -1,0 +1,43 @@
+<div class="ticket-purchase-container">
+  <h2>קניית כרטיסים לאירוע</h2>
+  
+  <div *ngIf="alertMessage" [ngClass]="alertClass" class="alert-container">
+    {{ alertMessage }}
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
+    <div class="form-group">
+      <label for="numOfTickets">מספר כרטיסים:</label>
+      <input type="number" id="numOfTickets" [(ngModel)]="ticketData.NumOfTickets" name="NumOfTickets" required>
+    </div>
+
+    <div class="form-group">
+      <label for="needsAccessibleSeat">מושב נגיש:</label>
+      <input type="checkbox" id="needsAccessibleSeat" [(ngModel)]="ticketData.needsAccessibleSeat" name="needsAccessibleSeat">
+    </div>
+
+    <div class="form-group">
+      <label for="prefersCloserToStage">עדיפות למקום קרוב לבמה:</label>
+      <input type="checkbox" id="prefersCloserToStage" [(ngModel)]="ticketData.prefersCloserToStage" name="prefersCloserToStage">
+    </div>
+
+    <div class="form-group">
+      <label for="prefersAisleSeat">עדיפות לשבת ליד המעבר:</label>
+      <input type="checkbox" id="prefersAisleSeat" [(ngModel)]="ticketData.prefersAisleSeat" name="prefersAisleSeat">
+    </div>
+
+    <div class="form-group">
+      <label for="prefersCenter">עדיפות לשבת במרכז:</label>
+      <input type="checkbox" id="prefersCenter" [(ngModel)]="ticketData.prefersCenter" name="prefersCenter">
+    </div>
+
+    <div class="form-group">
+      <label for="PreferredRow">העדפה לשורה:</label>
+      <input type="number" id="PreferredRow" [(ngModel)]="ticketData.PreferredRow" name="PreferredRow" min="1" required>
+    </div>
+        
+
+
+    <button type="submit">שלח</button>
+  </form>
+</div>

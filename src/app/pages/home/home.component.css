@@ -1,0 +1,53 @@
+/* תמונת רקע לכל הדף */
+:host {
+  display: block;
+  height: 100vh; /* כל גובה המסך */
+  background-image: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba'); /* תמונה לדוגמה */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #a638c2; /* טקסט לבן */
+}
+
+/* כפתור ההתחברות הצף בפינה הימנית העליונה */
+.login-floating {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6a1b9a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.login-floating:hover {
+  background-color: #8e24aa;
+}
+
+/* מרכז הדף */
+.home-container {
+  text-align: center;
+  padding-top: 150px; /* רווח מהחלק העליון */
+}
+
+/* כפתור "צפה בכל האירועים" */
+.home-container button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.home-container button:hover {
+  background-color: #ffa726;
+}

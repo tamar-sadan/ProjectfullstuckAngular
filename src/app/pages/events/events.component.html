@@ -1,0 +1,14 @@
+<div class="events-container">
+  <h2>כל האירועים הקרובים</h2>
+  
+  <ul *ngIf="events.length > 0; else noEvents">
+    <li *ngFor="let event of events" (click)="viewEvent(event.id)" class="event-item">
+      <h3>{{ event.name }}</h3>
+      <p>{{ event.date | date: 'dd/MM/yyyy' }}</p> <!-- עיצוב תאריך -->
+    </li>
+  </ul>
+
+  <ng-template #noEvents>
+    <p>אין אירועים זמינים כרגע.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,76 @@
+/* הגדרת עיצוב כללי ל-navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+  }
+  
+  /* עיצוב התפריט במובייל */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 30px;
+      background-color: #333;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .navbar .logo {
+      font-size: 1.5em;
+    }
+  }
+  
+  /* הוספת כפתור לתפריט נפתח במובייל */
+  .menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+  

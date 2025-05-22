@@ -1,0 +1,49 @@
+<div *ngIf="errorMessage" class="error-box">
+  {{ errorMessage }}
+</div>
+<h2>התחברות</h2>
+
+<form (ngSubmit)="login()" #loginForm="ngForm">
+
+  <div class="form-group">
+    <label for="UserName">שם משתמש:</label>
+    <input 
+      type="text" 
+      id="UserName" 
+      [(ngModel)]="userData.UserName" 
+      name="UserName" 
+      #UserName="ngModel"
+      required 
+      pattern="^(?! )[a-zA-Zא-ת0-9 ]*(?<! )$"
+    />
+    <div *ngIf="UserName.invalid && UserName.touched" class="error">
+      <span *ngIf="UserName.errors?.['required']">שם המשתמש נדרש.</span>
+      <span *ngIf="UserName.errors?.['pattern']">שם משתמש יכול לכלול אותיות בעברית, אנגלית, מספרים ורווחים **רק באמצע**.</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Password">סיסמה:</label>
+    <input 
+      type="password" 
+      id="Password" 
+      [(ngModel)]="userData.Password" 
+      name="Password" 
+      #Password="ngModel"
+      required 
+      minlength="6"
+    />
+    <div *ngIf="Password.invalid && Password.touched" class="error">
+      <span *ngIf="Password.errors?.['required']">סיסמה נדרשת.</span>
+      <span *ngIf="Password.errors?.['minlength']">הסיסמה חייבת להכיל לפחות 6 תווים.</span>
+    </div>
+  </div>
+
+  <button type="submit">התחבר</button>
+</form>
+
+<div class="register-link">
+  <button>
+    אין לך חשבון? <a routerLink="/signup">הרשם כאן</a>
+  </button>
+</div>

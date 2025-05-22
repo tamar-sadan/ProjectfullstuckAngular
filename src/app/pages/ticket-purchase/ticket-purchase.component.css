@@ -1,0 +1,148 @@
+/* מיכל עוטף */
+.ticket-purchase-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  /* כותרת טופס */
+  .ticket-purchase-container h2 {
+    font-size: 30px;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* קבוצת שדות */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: right;
+  }
+  
+  /* תוויות */
+  label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  /* שדות קלט */
+  input[type="number"], input[type="checkbox"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 6px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input[type="number"]:focus, input[type="checkbox"]:focus {
+    border-color: #6a1b9a;
+    outline: none;
+  }
+  
+  /* כפתור שלח */
+  button {
+    padding: 12px 25px;
+    background-color: #6a1b9a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  button:hover {
+    background-color: #8e24aa;
+    transform: scale(1.05);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* עיצוב של תיבות סימון (Checkbox) */
+  input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+  }
+  
+  /* עיצוב טקסטים עבור שדות צ'קבוקס */
+  input[type="checkbox"] + label {
+    font-size: 14px;
+    margin-right: 8px;
+    display: inline-block;
+    color: #333;
+  }
+  
+  input[type="checkbox"]:focus + label {
+    color: #6a1b9a;
+  }
+  
+  /* אמצעי טעינה */
+  ng-template {
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+  }
+  
+  /* עיצוב שדות קלט במסך רגיש */
+  @media (max-width: 600px) {
+    .ticket-purchase-container {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    input[type="number"], input[type="checkbox"] {
+      max-width: 100%;
+    }
+  }
+  /* עיצוב alert עבור הצלחה */
+.alert-success {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* עיצוב alert עבור שגיאה */
+.alert-error {
+  background-color: #df256c;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+  
+  

@@ -1,0 +1,53 @@
+.footer {
+    background-color: #222;
+    color: #f1f1f1;
+    padding: 10px 0; /* פחות גובה */
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px; /* טקסט קטן יותר */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* פחות רווחים בין האלמנטים */
+  }
+  
+  .footer-logo {
+    font-size: 1.3em; /* לוגו קטן יותר */
+    font-weight: bold;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 12px; /* פחות רווח בין האייקונים */
+    justify-content: center;
+  }
+  
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* קטן יותר */
+    height: 36px; /* קטן יותר */
+    background-color: #333;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .footer-social a:hover {
+    background-color: #ff9800;
+    transform: translateY(-2px); /* פחות תזוזה */
+  }
+  
+  .footer-social svg {
+    width: 18px; /* קטן יותר */
+    height: 18px; /* קטן יותר */
+  }
+  
+  .footer-bottom {
+    font-size: 0.8em; /* טקסט קטן יותר */
+    color: #aaa;
+  }
+  

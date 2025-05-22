@@ -1,0 +1,38 @@
+<h2>הרשמה</h2>
+
+<form (ngSubmit)="signup()" #signupForm="ngForm">
+  <div class="form-group">
+    <label for="UserName">שם משתמש:</label>
+    <input type="text" id="UserName" [(ngModel)]="userData.Name" name="UserName" 
+      #UserName="ngModel" required pattern="^(?! )[a-zA-Zא-ת0-9 ]*(?<! )$" />
+    <div *ngIf="UserName.invalid && UserName.touched" class="error">
+      <span *ngIf="UserName.errors?.['required']">שם המשתמש נדרש.</span>
+      <span *ngIf="UserName.errors?.['pattern']">שם משתמש יכול לכלול אותיות בעברית, אנגלית, מספרים ורווחים **רק באמצע**.</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Email">המייל:</label>
+    <input type="email" id="Email" [(ngModel)]="userData.Email" name="Email" 
+      #Email="ngModel" required pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" />
+    <div *ngIf="Email.invalid && Email.touched" class="error">
+      <span *ngIf="Email.errors?.['required']">כתובת המייל נדרשת.</span>
+      <span *ngIf="Email.errors?.['pattern']">כתובת המייל שגויה.</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Password">סיסמה:</label>
+    <input type="password" id="Password" [(ngModel)]="userData.Password" name="Password" 
+      #Password="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$" />
+    <div *ngIf="Password.invalid && Password.touched" class="error">
+      <span *ngIf="Password.errors?.['required']">סיסמה נדרשת.</span>
+      <span *ngIf="Password.errors?.['pattern']">הסיסמה חייבת לכלול לפחות 6 תווים, אות גדולה, אות קטנה ומספר.</span>
+    </div>
+  </div>
+
+  <button type="submit">הרשם</button>
+</form>
+
+<!-- הודעת שגיאה כללית במקרה של בעיית התחברות -->
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
